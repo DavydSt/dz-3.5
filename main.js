@@ -1,73 +1,113 @@
-"use strict"
+"use strict";
 
 // 1 =============
 
 const choice = "Чай";
 
-if ( choice === "Кава" ) {
+switch (choice) {
+  case "Кава":
     console.log("Кава");
-} else if (  choice === "Чай" ) {
+    break;
+
+  case "Чай":
     console.log("Чай");
-} else if (  choice === "Сік" ) {
+    break;
+
+  case "Сік":
     console.log("Сік");
+    break;
+
+  default:
+    console.log("not right, do again!");
 }
 
 // 2 =============
 
-const day = "пʼятниця"
+const day = "пʼятниця";
 
-if (day === "понеділок" || "вівторок" || "середа" || "четвер" || "пʼятниця"){
-    console.log("це робочий день");
-} else if (day === "субота" || "неділя") {
-    console.log("це не робочий день");
+switch (day) {
+  case "понеділок":
+  case "вівторок":
+  case "середа":
+  case "четвер":
+  case "пʼятниця":
+    console.log("Це робочий день");
+    break;
+  case "субота":
+  case "неділя":
+    console.log("Це вихідний день");
+    break;
+  default:
+    console.log("not right, do again!");
 }
 
 // 3 =============
 
-let month = 3; 
+const month = 3;
 
-if (month >= 3 && month <= 5) {
-    console.log("це весна");
-} else if (month >= 6 && month <= 8) {
-    console.log("це літо");
-} else if (month >= 9 && month <= 11) {
-    console.log("це осінь");
-} else if (month === 12 || month === 1 || month === 2) {
-    console.log("це зима");
+switch (month) {
+  case 12:
+  case 1:
+  case 2:
+    console.log("Зима");
+    break;
+  case 3:
+  case 4:
+  case 5:
+    console.log("Весна");
+    break;
+  case 6:
+  case 7:
+  case 8:
+    console.log("Літо");
+    break;
+  case 9:
+  case 10:
+  case 11:
+    console.log("Осінь");
+    break;
+  default:
+    console.log("not right, do again!");
 }
 
 // 4 =============
 
 const color = "червоний";
 
-if (color === "червоний") {
+switch (color) {
+  case "червоний":
     console.log("стоп");
-} else if (color === "зелений") {
+    break;
+  case "зелений":
     console.log("йти");
-} else if (color === "жовтий") {
+    break;
+  case "жовтий":
     console.log("чекати");
+    break;
+  default:
+    console.log("not right, do again!");
 }
 
 // 5 =============
 
 const num1 = 3;
 const num2 = 7;
-const operator =  "+";
+const operator = "+";
 
-if (operator === "+") {
-   console.log(num1 + num2);
-} else if (operator === "-") {
-    console.log(num1 - num2);
-} else if (operator === "*") {
-    console.log(num1 * num2);
-}else if (num1 === 0 && num2 === 0) {
-    console.log("ведить інше число - не нуль");
-} else if (operator === "/") {
-    console.log(num1 / num2);
+switch (operator) {
+    case "+":
+        console.log(num1 + num2);
+        break;
+    case "-":
+        console.log(num1 - num2);
+        break;
+    case "*":
+        console.log(num1 * num2);
+        break;
+    case "/":
+        console.log(num1 / num2);
+        if (num1 === 0 && num2 === 0) {
+            console.log("ведить інше число - не нуль");
+        }
+        break;
 }
-
-// else if ((num1 === 0 && num2 === 0) || num1 / num2) {
-//     console.log("рівняння не вірне");
-// }
-
-
